@@ -9,13 +9,13 @@ function getOnApi() {
 
 function printScreen(response) {
   response.map((products) => {
-    showProducts.innerHTML = template(products);
+    showProducts.innerHTML += template(products);
   });
 }
 
 function template(products) {
   return `<div class="card" style="width: 18rem;">
-  <img src="${products.items[0].images[0].imagesUrl}" class="card-img-top" alt="...">
+  <img src="${products.items[0].images[0].imageUrl}" class="card-img-top" alt="...">
   <div class="card-body">
       <h5 class="card-title">${products.productName}</h5>
       <p class="card-text">${products.items[0].sellers[0].commertialOffer.Price}</p>
