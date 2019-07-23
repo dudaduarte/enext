@@ -10,7 +10,6 @@ let button = document.querySelector('#wishlist');
 button.addEventListener('click', (event) => {
   event.target.dataset.id
   console.log(event.target.dataset.id)
-  )
 })
 
 function showModal() {
