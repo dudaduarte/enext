@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded",() => {
 const showProducts = document.querySelector('.showProducts');
 
 function getOnApi() {
@@ -23,3 +24,7 @@ function template(products) {
   </div>
   </div>`
 }
+
+getOnApi();
+
+})
