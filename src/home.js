@@ -17,9 +17,11 @@ function template(products) {
   return `<div class="card" style="width: 18rem;">
   <img src="${products.items[0].images[0].imageUrl}" class="card-img-top" data-img-id="${products.productId} alt="...">
   <div class="card-body">
+    <a href="${products.link}">
       <h5 class="card-title" data-name-id="${products.productId}>${products.productName}</h5>
       <p class="card-text">${products.items[0].sellers[0].commertialOffer.Price}</p>
-      <a href="#" id="wishlist" class="btn btn-primary" data-id="${products.productId}"><i class="fas fa-heart"></i></a>
+      <buton  id="wishlist" class="btn btn-primary" data-id="${products.productId}"><i class="fas fa-heart"></i></button>
+    </a>
   </div>
   </div>`
 }
