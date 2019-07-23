@@ -15,9 +15,9 @@ function printScreen(response) {
 
 function template(products) {
   return `<div class="card" style="width: 18rem;">
-  <img src="${products.items[0].images[0].imageUrl}" class="card-img-top" alt="...">
+  <img src="${products.items[0].images[0].imageUrl}" class="card-img-top" data-img-id="${products.productId} alt="...">
   <div class="card-body">
-      <h5 class="card-title">${products.productName}</h5>
+      <h5 class="card-title" data-name-id="${products.productId}>${products.productName}</h5>
       <p class="card-text">${products.items[0].sellers[0].commertialOffer.Price}</p>
       <a href="#" id="like" class="btn btn-primary" data-id="${products.productId}"><i class="fas fa-heart"></i></a>
   </div>
