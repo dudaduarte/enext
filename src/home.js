@@ -19,7 +19,7 @@ function template(products) {
   <div class="card-body">
       <h5 class="card-title">${products.productName}</h5>
       <p class="card-text">${products.items[0].sellers[0].commertialOffer.Price}</p>
-      <a href="#" id="like" class="btn btn-primary" data-id="${products.productId}"><i class="fas fa-heart"></i></a>
+      <a href="#" id="wishlist" class="btn btn-primary" data-id="${products.productId}"><i class="fas fa-heart"></i></a>
   </div>
   </div>`
 }
