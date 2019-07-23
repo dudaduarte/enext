@@ -17,10 +17,9 @@ function template(products) {
   return `<div class="card" style="width: 18rem;">
   <img src="${products.items[0].images[0].imagesUrl}" class="card-img-top" alt="...">
   <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-          card's content.</p>
-      <a href="#" id="like" class="btn btn-primary">Like</a>
+      <h5 class="card-title">${products.productName}</h5>
+      <p class="card-text">${products.items[0].sellers[0].commertialOffer.Price}</p>
+      <a href="#" id="like" class="btn btn-primary" data-id="${products.productId}"><i class="fas fa-heart"></i></a>
   </div>
   </div>`
 }
