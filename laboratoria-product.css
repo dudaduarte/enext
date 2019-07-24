@@ -32,19 +32,19 @@
 
 h1 {
   font-family: Roboto;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 /* Price */
 #productPrice {
   font-family: Roboto;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 /* Description */
 h2.title {
   font-family: Roboto;
-  font-size: 18px;
+  font-size: 15px;
   border-bottom:1px solid #333;
   display:block;
   font-weight:700;
@@ -54,6 +54,6 @@ h2.title {
 
 #productDescription {
   font-family: Roboto;
-  font-size: 18px;
+  font-size: 15px;
   margin-top:20px;
 }
