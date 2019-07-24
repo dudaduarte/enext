@@ -19,6 +19,8 @@
 
 .apresentacao {
   border: 2px solid #333;
+  display: flex;
+  justify-content: center;
 }
 
 #content {
