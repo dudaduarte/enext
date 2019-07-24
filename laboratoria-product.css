@@ -11,10 +11,13 @@
   margin-top: 5vw;
 }
 
-.ul {
-  list-style: none;
+.thumbs {
   display: flex;
   flex-direction: row;
+}
+
+.li {
+  list-style: none;
 }
 
 .apresentacao {
