@@ -2,14 +2,18 @@
 /* Layout */
 #sideBar {
   width:400px;
-  margin-left: 20vw;
+  margin-left: 15vw;
   margin-top: 10vw;
+  display: flex;
+  flex-direction: row
 }
 
 #content {
   width:500px;
-  margin-left: 20vw;
+  margin-left: 15vw;
   margin-top: 10vw;
+  display: flex;
+  flex-direction: row
 }
 
 h1 {
