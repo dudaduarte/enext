@@ -6,13 +6,13 @@
 }
 
 #sideBar {
-  width:400px;
+  width:40%;
   margin-left: 10vw;
   margin-top: 5vw;
 }
 
 #content {
-  width:500px;
+  width:40%;
   margin-left: 10vw;
   margin-top: 5vw;
 }
