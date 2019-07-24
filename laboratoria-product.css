@@ -11,6 +11,12 @@
   margin-top: 5vw;
 }
 
+.ul.thumbs{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
 #content {
   width:40%;
   margin-left: 5vw;
