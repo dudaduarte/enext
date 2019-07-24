@@ -17,6 +17,10 @@
   flex-direction: row;
 }
 
+.apresentacao {
+  border: 2px solid #333;
+}
+
 #content {
   width:40%;
   margin-left: 5vw;
