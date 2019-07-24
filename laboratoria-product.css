@@ -7,16 +7,14 @@
 
 #sideBar {
   width:400px;
-  margin-left: 15vw;
+  margin-left: 10vw;
   margin-top: 5vw;
-  display: flex;
 }
 
 #content {
   width:500px;
-  margin-left: 15vw;
+  margin-left: 10vw;
   margin-top: 5vw;
-  display: flex;
 }
 
 h1 {
