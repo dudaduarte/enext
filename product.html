@@ -1,17 +1,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 <script src="https://kit.fontawesome.com/0901acfd96.js"></script>
+
 <head>
-<title>Loja Modelo</title>
-<vtex:metaTags/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&amp;display=swap" rel="stylesheet"/>
-<link rel="stylesheet" type="text/css" href="~/arquivos/general.css" />
-<script type="text/javascript" src="~/arquivos/home.js"></script>
-<script type="text/javascript" src="~/arquivos/login.js"></script>
-<script type="text/javascript" src="~/arquivos/product.js"></script>
+  <title>Loja Modelo</title>
+  <vtex:metaTags />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="~/arquivos/general.css" />
+  <link rel="stylesheet" type="text/css" href="~/arquivos/laboratoria-product.css" />
+  <script type="text/javascript" src="~/arquivos/home.js"></script>
+  <script type="text/javascript" src="~/arquivos/login.js"></script>
+  <script type="text/javascript" src="~/arquivos/product.js"></script>
 </head>
+
 <body>
   <nav class="bg-dark text-white">
     <ul class="nav justify-content-end">
@@ -28,38 +32,39 @@
       </li>
     </ul>
   </nav>
-    
-    <main class="display">
-      <div id="sideBar">
+
+  <main class="display">
+    <div id="sideBar">
       <!--  Controle: imagem do produto -->
       <vtex.cmc:ProductImage zoom="off" />
       <!-- /Controle: imagem do produto -->
-	    </div>
-	    
-	    <div id="content">
-    		<!--  Controle: nome do produto -->
-    		<h1><vtex.cmc:productName /></h1>
-    		<!-- /Controle: nome do produto -->
-    		
-    		<!--  Controle: preco do produto -->
-    		<div id="productPrice"><vtex.cmc:skuPrice /></div>
-    		<!-- /Controle: preco do produto -->
-    		
-    		<!--  Controle: descricao do produto -->
-    		<div id="productDescription">
-    			<h2 class="title">Descrição do Produto</h2>
-    			<vtex.cmc:ProductDescription />
-    		</div>
-    		<!-- /Controle: descricao do produto -->
-    
-    		<!--  Controle: especificacao do produto -->
-    		<vtex.cmc:productSpecification />
-    		<!-- /Controle: especificacao do produto -->
-    		
-    		<!--  Controle: avaliacao do cliente -->
-    		<vtex.cmc:UserReview />
-    		<!-- /Controle: avaliacao do cliente -->
-	    </div>
-    </main>
+    </div>
+
+    <div id="content">
+      <!--  Controle: nome do produto -->
+      <h1>
+        <vtex.cmc:productName />
+      </h1>
+      <!-- /Controle: nome do produto -->
+
+      <!--  Controle: preco do produto -->
+      <div id="productPrice">
+        <vtex.cmc:skuPrice />
+      </div>
+      <!-- /Controle: preco do produto -->
+
+      <!--  Controle: descricao do produto -->
+      <div id="productDescription">
+        <h2 class="title">Descrição do Produto</h2>
+        <vtex.cmc:ProductDescription />
+      </div>
+      <!-- /Controle: descricao do produto -->
+
+      <!--  Controle: especificacao do produto -->
+      <vtex.cmc:productSpecification />
+      <!-- /Controle: especificacao do produto -->
+    </div>
+  </main>
 </body>
+
 </html>
