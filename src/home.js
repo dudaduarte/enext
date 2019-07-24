@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",() => {
   const showProducts = document.querySelector('.showProducts');
   let productsArr = [];
-  let userEmail;
+  let userEmail = null;
   getOnApi();
   
   async function userListener() {
@@ -10,13 +10,6 @@ document.addEventListener("DOMContentLoaded",() => {
     if(userResponse.IsUserDefined){
       userEmail = userResponse.Email;
       getUserData();
-    } else {
-      vtexid.start({
-        returnUrl: '',
-        userEmail: '',
-        locale: 'pt-BR',
-        forceReload: true
-        });
     }
   }
   userListener();
@@ -40,31 +33,42 @@ document.addEventListener("DOMContentLoaded",() => {
                 <img src="${products.items[0].images[0].imageUrl}" class="card-img-top border-bottom" alt="..." height="329" width="329">
               </a>
               <div class="card-body d-flex flex-row">
-                <a href="${products.link}">
-                  <p class="card-title text-dark">${products.productName}</p>
-                </a>
-                <p class="card-text text-dark">RS ${products.items[0].sellers[0].commertialOffer.Price}</p>
-              </div>
-              <div class="ml-auto">
-                <button id="wishlist" class="btn mr-auto" onclick="idLike(${products.productId})" data-id="${products.productId}"><i class="fas fa-heart"></i></button>
+                <div>
+                  <a href="${products.link}">
+                    <p class="card-title text-dark">${products.productName}</p>
+                  </a>
+                  <p class="card-text text-dark">RS ${products.items[0].sellers[0].commertialOffer.Price}</p>
+                </div>
+                <div class="ml-auto">
+                  <button id="wishlist" class="btn mr-auto" onclick="idLike(${products.productId})" data-id="${products.productId}"><i class="fas fa-heart"></i></button>
+                </div>
               </div>
             </div>`
    }
-  function test(btnLike) {
-    for (btn of btnLike) {
-      btn.addEventListener('click', (event) => {
-        let productId = event.currentTarget.dataset.id;
-        let productIndex = productsArr.indexOf(productId);
-        if (productIndex === -1) {
-          productsArr.push(productId);
-        } else {
-          productsArr.splice(productIndex);
-        }
-        let productsString = productsArr.join(',');
-        patchNewData(productsString)
-      });
-      }
-  }
+   function test(btnLike) {
+     for (btn of btnLike) {
+       btn.addEventListener("click", event => {
+         if (userEmail) {
+           let productId = event.currentTarget.dataset.id;
+           let productIndex = productsArr.indexOf(productId);
+           if (productIndex === -1) {
+             productsArr.push(productId);
+           } else {
+             productsArr.splice(productIndex);
+           }
+           let productsString = productsArr.join(",");
+           patchNewData(productsString);
+         } else {
+           vtexid.start({
+             returnUrl: "",
+             userEmail: "",
+             locale: "pt-BR",
+             forceReload: true
+           });
+         }
+       });
+     }
+   }
   async function getUserData() {
     const getResponse = await fetch(`https://www.enext.vtexcommercestable.com.br//api/dataentities/CL/search?email=${userEmail}&_fields=wishlistProducts`);
     const getResponseJson = await getResponse.json();
