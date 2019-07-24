@@ -1,9 +1,9 @@
-vtexid.start({
-    returnUrl: '',
-    userEmail: '',
-    locale: 'pt-BR',
-    forceReload: false
-})
+// vtexid.start({
+//     returnUrl: '',
+//     userEmail: '',
+//     locale: 'pt-BR',
+//     forceReload: false
+// })
 
 
 let button = document.querySelector('#wishlist');
