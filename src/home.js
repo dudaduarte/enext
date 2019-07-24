@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded",() => {
                   <p class="card-text text-dark">RS ${products.items[0].sellers[0].commertialOffer.Price}</p>
                 </div>
                 <div class="ml-auto">
-                  <button id="wishlist" class="btn mr-auto" onclick="idLike(${products.productId})" data-id="${products.productId}"><i class="fas fa-heart"></i></button>
+                  <button id="wishlist" class="btn mr-auto" data-id="${products.productId}"><i class="fas fa-heart"></i></button>
                 </div>
               </div>
             </div>`
