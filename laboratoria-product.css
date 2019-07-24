@@ -67,3 +67,8 @@ p {
 .fa-heart {
   font-size: 20px;
 }
+
+
+.welcome {
+  display: none;
+}
