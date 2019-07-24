@@ -1,15 +1,41 @@
 
 /* Layout */
-#sideBar {width:300px;}
-#content {width:650px;}
+#sideBar {
+  width:400px;
+  margin-left: 20vw;
+  margin-top: 10vw;
+}
 
-h1 {font-size:13px;font-weight:700;margin-bottom:18px;}
+#content {
+  width:500px;
+  margin-left: 20vw;
+  margin-top: 10vw;
+}
 
-/* Collections */
-h2.title {border-bottom:1px solid #333;display:block;font-size:12px;font-weight:700;margin-bottom:13px;padding-bottom:10px;}
+h1 {
+  font-family: Roboto;
+  font-size: 30px;
+}
 
 /* Price */
-#productPrice {margin-bottom:15px;}
+#productPrice {
+  font-family: Roboto;
+  font-size: 18px;
+}
 
 /* Description */
-#productDescription {margin-top:20px;}
+h2.title {
+  font-family: Roboto;
+  font-size: 18px;
+  border-bottom:1px solid #333;
+  display:block;
+  font-weight:700;
+  margin-bottom:13px;
+  padding-bottom:10px;
+}
+
+#productDescription {
+  font-family: Roboto;
+  font-size: 18px;
+  margin-top:20px;
+}
