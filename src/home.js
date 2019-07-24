@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded",() => {
     }
   }
   userListener();
-​
   function getOnApi() {
     fetch('https://www.enext.vtexcommercestable.com.br/api/catalog_system/pub/products/search')
       .then(response => response.json())
@@ -51,7 +50,6 @@ document.addEventListener("DOMContentLoaded",() => {
               </div>
             </div>`
    }
-​
   function test(btnLike) {
     for (btn of btnLike) {
       btn.addEventListener('click', (event) => {
@@ -67,7 +65,6 @@ document.addEventListener("DOMContentLoaded",() => {
       });
       }
   }
-​  ​
   async function getUserData() {
     const getResponse = await fetch(`https://www.enext.vtexcommercestable.com.br//api/dataentities/CL/search?email=${userEmail}&_fields=wishlistProducts`);
     const getResponseJson = await getResponse.json();
